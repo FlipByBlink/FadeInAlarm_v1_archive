@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fadeinAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSU-9k-mGY">
+                                <rect key="frame" x="107" y="353" width="287" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="BI2-RO-biR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="0.1333333333" green="0.15686274510000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VDA-JC-E3Z">
+                                <rect key="frame" x="43" y="453" width="160" height="100"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="494-Yl-yaY"/>
+                                    <constraint firstAttribute="width" constant="160" id="wW3-bh-sLP"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="580204662.670632">
+                                    <!--2019-05-22 07:57:42 +0000-->
+                                </date>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4F-WE-KXO">
+                                <rect key="frame" x="211" y="453" width="160" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="E2Q-bW-u1x"/>
+                                    <constraint firstAttribute="width" constant="160" id="eGW-hK-CS7"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmC-mb-R1I">
+                                <rect key="frame" x="154" y="302" width="106" height="51"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.0" green="0.67843137249999996" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bO4-KA-Yzl" kind="show" identifier="alarmSegue" id="gaU-Sx-4y3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHK-g0-5fD" userLabel="mp3">
+                                <rect key="frame" x="177" y="563" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="cYn-7p-NzF"/>
+                                    <constraint firstAttribute="width" secondItem="GHK-g0-5fD" secondAttribute="height" multiplier="1:1" id="dR6-OV-nDy"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Image"/>
+                                <connections>
+                                    <action selector="📤🎼:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DQu-JQ-cpw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93323183060000003" green="0.93339174989999996" blue="0.93322181699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tmC-mb-R1I" firstAttribute="bottom" secondItem="bSU-9k-mGY" secondAttribute="top" id="0jv-XC-nzd"/>
+                            <constraint firstItem="VDA-JC-E3Z" firstAttribute="top" secondItem="bSU-9k-mGY" secondAttribute="bottom" id="4PD-1Y-skl"/>
+                            <constraint firstItem="GHK-g0-5fD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="52J-wX-u8J"/>
+                            <constraint firstItem="bSU-9k-mGY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8RC-HJ-7vn"/>
+                            <constraint firstItem="VDA-JC-E3Z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-4" id="DZa-hn-cGA"/>
+                            <constraint firstItem="q4F-WE-KXO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="4" id="Ff5-ln-PFI"/>
+                            <constraint firstItem="tmC-mb-R1I" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P7k-Uw-IWz"/>
+                            <constraint firstItem="bSU-9k-mGY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-100" id="PRY-gy-Lmo"/>
+                            <constraint firstItem="GHK-g0-5fD" firstAttribute="top" secondItem="q4F-WE-KXO" secondAttribute="bottom" constant="10" id="aQw-n6-o9O"/>
+                            <constraint firstItem="q4F-WE-KXO" firstAttribute="top" secondItem="bSU-9k-mGY" secondAttribute="bottom" id="hCc-DG-TIe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bSU-9k-mGY" secondAttribute="trailing" constant="20" id="k6b-up-HMg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="📝" destination="bSU-9k-mGY" id="qxD-Mo-htt"/>
+                        <outlet property="🔈🔉🔊time🎰" destination="q4F-WE-KXO" id="8Em-jy-ujJ"/>
+                        <outlet property="🛎🕰🎰" destination="VDA-JC-E3Z" id="nSg-Sv-7sf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.971014492753625" y="20.758928571428569"/>
+        </scene>
+        <!--Alarm View Controller-->
+        <scene sceneID="Qqd-n7-URo">
+            <objects>
+                <viewController id="bO4-KA-Yzl" customClass="AlarmViewController" customModule="fadeinAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OFR-8C-03x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hL1-fP-bne"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JND-oc-QPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="512" height="512"/>
+    </resources>
+</document>
